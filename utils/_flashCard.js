@@ -1,0 +1,1 @@
+export const FLASHCARD_KEY = "FLASHCARD_KEY";
