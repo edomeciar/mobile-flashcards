@@ -1,8 +1,10 @@
 import { AsyncStorage } from "react-native";
-import { FLASHCARD_KEY } from "_flashCard";
+
+const FLASHCARD_KEY = "FLASHCARD_KEY";
 
 export function getDecks() {
   // return all of the decks along with their titles, questions, and answers.
+  console.log('getDecks');
   return AsyncStorage.getItem(FLASHCARD_KEY).then(results =>
     JSON.parse(results)
   );
@@ -28,6 +30,7 @@ export function removeDeck(id) {
 
 export function saveDeckTitle(title) {
   //  take in a single title argument and add it to the decks.
+  console.log('saveDeckTitle', title);
   return AsyncStorage.mergeItem(
     FLASHCARD_KEY,
     JSON.stringify({
