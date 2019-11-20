@@ -32,7 +32,6 @@ export default class DeckListScreen extends Component {
 
   render() {
     const { decks, bounceValue } = this.state;
-    console.log("deck list render", decks);
     return (
       <SafeAreaView style={styles.container}>
         <NavigationEvents onDidFocus={this.onDidFocus} />
