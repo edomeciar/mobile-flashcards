@@ -70,8 +70,8 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   scrollView: {
+    paddingTop: 10,
     backgroundColor: "white",
-    marginHorizontal: 20
   },
   direction: {
     color: Colors.lightPurp,

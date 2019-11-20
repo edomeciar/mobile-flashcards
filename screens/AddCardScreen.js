@@ -10,7 +10,7 @@ import {
 import Colors from "../constants/Colors";
 import { addCardToDeck } from "../utils/api";
 
-export default class AddDeckScreen extends Component {
+export default class AddCardScreen extends Component {
   state = {
     question: "",
     answer: ""
@@ -80,13 +80,15 @@ const styles = StyleSheet.create({
   input: {
     width: 300,
     fontSize: 30,
-    paddingBottom: 5,
-    borderColor: Colors.gray,
+    borderColor: Colors.tabIconDefault,
     backgroundColor: Colors.white,
-    borderWidth: 1
+    borderRadius: 7,
+    borderWidth: 1,
+    margin: 10
   },
   iosSubmitBtn: {
-    backgroundColor: Colors.green,
+    borderColor: Colors.tabIconDefault,
+    backgroundColor: Colors.white,
     padding: 10,
     borderRadius: 7,
     height: 45,
@@ -95,7 +97,8 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   AndroidSubmitBtn: {
-    backgroundColor: Colors.green,
+    borderColor: Colors.tabIconDefault,
+    backgroundColor: Colors.white,
     padding: 10,
     paddingLeft: 30,
     paddingRight: 30,
@@ -104,7 +107,7 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   submitBtnText: {
-    color: Colors.white,
+    color: Colors.tabIconSelected,
     fontSize: 22,
     textAlign: "center"
   }

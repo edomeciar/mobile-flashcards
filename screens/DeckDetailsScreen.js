@@ -53,7 +53,7 @@ export default class DeckDetailsScreen extends Component {
                 {`${this.state.deck.questions.length} # of Cards`}
               </Text>
             </View>
-            <View style={styles.actions}>
+            <View>
               <TouchableOpacity
                 style={
                   Platform.OS === "ios"
@@ -62,29 +62,38 @@ export default class DeckDetailsScreen extends Component {
                 }
                 onPress={this.handleAddCard}
               >
-                <Text style={styles.submitBtnText}>Add Card</Text>
+                <Text
+                  style={[
+                    styles.submitBtnText,
+                    { color: Colors.tabIconSelected }
+                  ]}
+                >
+                  Add Card
+                </Text>
               </TouchableOpacity>
               <TouchableOpacity
-                style={[
+                style={
                   Platform.OS === "ios"
                     ? styles.iosSubmitBtn
-                    : styles.AndroidSubmitBtn,
-                  { backgroundColor: Colors.lightPurp }
-                ]}
+                    : styles.AndroidSubmitBtn
+                }
                 onPress={this.handleStartQuiz}
               >
-                <Text style={styles.submitBtnText}>Start Quiz</Text>
+                <Text style={[styles.submitBtnText, { color: Colors.green }]}>
+                  Start Quiz
+                </Text>
               </TouchableOpacity>
               <TouchableOpacity
-                style={[
+                style={
                   Platform.OS === "ios"
                     ? styles.iosSubmitBtn
-                    : styles.AndroidSubmitBtn,
-                  { backgroundColor: Colors.red }
-                ]}
+                    : styles.AndroidSubmitBtn
+                }
                 onPress={this.handleDeleteDeck}
               >
-                <Text style={styles.submitBtnText}>Delete Deck</Text>
+                <Text style={[styles.submitBtnText, { color: Colors.red }]}>
+                  Delete Deck
+                </Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -113,7 +122,8 @@ const styles = StyleSheet.create({
     fontSize: 20
   },
   iosSubmitBtn: {
-    backgroundColor: Colors.purple,
+    borderColor: Colors.tabIconDefault,
+    backgroundColor: Colors.white,
     padding: 10,
     borderRadius: 7,
     height: 45,
@@ -122,7 +132,8 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   AndroidSubmitBtn: {
-    backgroundColor: Colors.purple,
+    borderColor: Colors.tabIconDefault,
+    backgroundColor: Colors.white,
     padding: 10,
     paddingLeft: 30,
     paddingRight: 30,
@@ -131,7 +142,6 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   submitBtnText: {
-    color: Colors.white,
     fontSize: 22,
     textAlign: "center"
   }

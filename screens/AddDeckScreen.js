@@ -58,7 +58,7 @@ AddDeckScreen.navigationOptions = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.noticeBackground,
+    backgroundColor: Colors.white,
     alignItems: "center",
     justifyContent: "center"
   },
@@ -70,12 +70,14 @@ const styles = StyleSheet.create({
   input: {
     width: 300,
     fontSize: 30,
-    borderColor: Colors.gray,
+    borderColor: Colors.tabIconDefault,
     backgroundColor: Colors.white,
+    borderRadius: 7,
     borderWidth: 1
   },
   iosSubmitBtn: {
-    backgroundColor: Colors.lightPurp,
+    borderColor: Colors.tabIconDefault,
+    backgroundColor: Colors.white,
     padding: 10,
     borderRadius: 7,
     height: 45,
@@ -84,7 +86,8 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   AndroidSubmitBtn: {
-    backgroundColor: Colors.lightPurp,
+    borderColor: Colors.tabIconDefault,
+    backgroundColor: Colors.white,
     padding: 10,
     paddingLeft: 30,
     paddingRight: 30,
@@ -93,7 +96,7 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   submitBtnText: {
-    color: Colors.white,
+    color: Colors.tabIconSelected,
     fontSize: 22,
     textAlign: "center"
   }
