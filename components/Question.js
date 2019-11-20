@@ -34,18 +34,21 @@ export default class Question extends Component {
   };
 
   render() {
-      const {currentQuestionNumber,totalQuestions, question, answer, isVisibleAnswer} = this.props;
+    const { isVisibleAnswer } = this.state;
+    const {
+      currentQuestionNumber,
+      totalQuestions,
+      question,
+      answer
+    } = this.props;
     return (
       <View style={styles.container}>
         <View style={styles.info}>
           <Text>
-            Question {currentQuestionNumber} of{" "}
-            {totalQuestions}
+            Question {currentQuestionNumber} of {totalQuestions}
           </Text>
           <Text style={styles.question}>{question}</Text>
-          {isVisibleAnswer && (
-            <Text style={styles.answer}>{answer}</Text>
-          )}
+          {isVisibleAnswer && <Text style={styles.answer}>{answer}</Text>}
         </View>
         <View style={styles.actions}>
           <TouchableOpacity
@@ -107,8 +110,9 @@ const styles = StyleSheet.create({
     fontSize: 30,
     padding: 10,
     borderRadius: 7,
+    borderColor: Colors.tabIconDefault,
     color: Colors.noticeText,
-    backgroundColor: Colors.noticeBackground,
+    backgroundColor: Colors.noticeBackground
   },
   info: {
     flex: 1,
